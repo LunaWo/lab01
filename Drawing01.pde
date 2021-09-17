@@ -1,17 +1,17 @@
-color bgColor = color(0, 255, 0);
-float circleSize = 100;
+PFont font;
+int fontSize = 24;
 
-void setup() {
-  size(800, 600, P2D); // P2D enables 2D GPU acceleration
-  background(bgColor);
+font = createFont("Arial", fontSize);
+textFont(font , fontSize);
+fill(255, 0, 0);
+String messege = "Hello World!";
+
+text (messege, 9, 9);
+
+void setup(){
+size(800, 0, P2D);
 }
 
-void draw() {  
-  if (mousePressed) {
-    rectMode(CENTER);
-    fill(0, 127, 255);
-    stroke(255, 0, 0);
-    line(mouseX, mouseY, pmouseX, pmouseY);
-    rect(mouseX, mouseY, circleSize, circleSize);
-  }
+void draw(){
+
 }
